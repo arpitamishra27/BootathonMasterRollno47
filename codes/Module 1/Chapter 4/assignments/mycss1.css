@@ -1,0 +1,20 @@
+body{
+	background-color:#FFEBCD;
+	margin: 10px;
+}
+h1{
+    text-decoration: underline;
+}
+p{
+    font-weight: bold;
+}
+
+input[type=button] {
+    background-color: rgba(75, 41, 9, 0.877);
+    border: none;
+    color: rgb(218, 208, 218);
+    padding: 18px 36px;
+    text-decoration: darkorange;
+    margin: 5px 4px;
+    cursor: grab;
+} 

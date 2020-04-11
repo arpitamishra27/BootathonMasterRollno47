@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="mycss.css">
+        <title>Experiment</title>
+    </head>
+    <body>
+        <h1>Washing Machine Control Using basic AND & NOT Gates</h1>
+        
+        <h3>Aim:</h3>
+        <p>To construct logic circuit of washing machine control using a generalized simulator and verify its output.</p>
+        
+        <h3>Theory:</h3>
+        <h4>1.Introduction</h4>
+        
+        <p>When logic gates are connected together to produce a specific output for certain specific combinations of input variables, with no storage involved,
+         the resulting circuit is called as a Combinational logic circuit. 
+         The combination of basic gates can be used for a variety of applications such as washing machine control, 
+         level monitoring and indicating applications in manufacturing processes, elevator control applications,
+        a warning indicating applications and binary addition -subtraction and multiplication circuits.</p>
+        <br>
+        <h4>1.1 APPLICATION:WASHING MACHINE CONTROLLER</h4>
+        <p>For simplicity, consider a three-sensor based washing machine controller namely Door Sensor, Water Level Sensor and Temperature Sensor that produce digital outputs. 
+        Let the controlling action include control of Water Valve, Heater and Motor. All these are digitally controlled devices.</p>
+       <br> <h4>1.2 CONCEPT</h4>
+       <p>The motor of the washing machine turns ON when the right temperature, the right water level and obviously when the door of the machine is closed.</p>
+        
+       <br>
+       <p>The system design involves three inputs: D, L & T representing Door position, Level & Temperature respectively. It controls three output devices: W, H & M representing Water Valve, Heater & Motor respectively. Let us decide the logics behind the system:</p>
+        
+       <br>
+       <p>D = 0 ------- Door Open;</p>
+       <p>D = 1-------- Door Closed (desired)</p>
+       <p>L = 0 --------Water Level is LOW;</p>
+       <p>L = 1 --------Water Level is HIGH (satisfactory)</p>
+       <p>T = 0 --------Temperature is LOW</p>
+       <p>T = 1 --------Temperature is HIGH (right value)</p>
+       <p>The truth table for this application can be developed by logical reasoning:</p>
+       <ol>
+           <li>For turning ON of any of the output devices, the washing machine door/lid should be closed at any point of time, so only last four cases of the truth table should to be considered where D takes a value 1.</li>
+            <li>If door is closed & water level is LOW, the water valve should be turned ON.</li>
+            
+            <li>If door is closed, water level is satisfactory (HIGH) & the temperature is low, the heater should be turned ON.</li>
+            
+            <li>Whereas when the door is closed, water level is satisfactory and the temperature is right, the motor should turn ON.</li>
+       </ol>
+       
+       
+      
+       <h5>Truth Table:</h5>
+        <table border="1" align="center">
+            <tr>
+                <th>Door(D)</th>
+                <th>Level(L)</th>
+                <th>Temperature(T)</th>
+                <th>Valve(V)</th>
+                <th>Heater(H)</th>
+                <th>Motor(M)</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+             </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+               
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+               
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+        </table>
+
+        <p>
+            Considering only those input conditions that produce a HIGH output, we get the reduced Boolean expressions for controlling as follows:
+            </p>
+            <p>Water Valve (V) = D.L'</p>
+     
+            <p>Heater (H) = D.L.T'</p>
+     
+            <p>Motor (M) = D.L.T</p>
+           
+     
+            <p><b>The corresponding combinational logic circuit is as shown in Figure 1.</b></p>
+     
+        <p>><img src="Vwashingmachine.png" ></p<br>
+      <p>
+        <h3>Procedure:</h3>
+        <ol>
+         <li>Turn On/OFF the inputs, D, L and T according to the truth table.</li>
+
+         <li>Note the output for various combinations of input.</li>
+         <li>Validate that the design works as per the problem statement:The motor of the washing machine turns ON when the right temperature, the right water leveland obviously when the door of the machine is closed.
+        </li>
+         <li> Using simulator build the washing machine control circuit and verify the result.</li>
+         </ol>
+         </p>
+    </body>
+</html>

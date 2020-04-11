@@ -1,0 +1,49 @@
+
+
+
+
+body {
+  background-image: url("background-dream-1.png");
+	
+	}
+
+h1 {
+  background-color: aqua;
+  color: black;
+  padding: 10px;
+font-style: italic;
+width: 100%;
+}
+p{
+	
+}
+
+
+
+/* Style the element with the id "myHeader" */
+#myHeader {
+  background-color: khaki;
+  color: black;
+
+  text-align: left;
+}
+
+/* Style all elements with the class name "city" */
+.city {
+  background-color: khaki;
+  color: black;
+  } 
+.head1 {
+  background-color: lemonchiffon;
+  color: black;
+   height: 100px;
+ }
+ .head2{
+  background-color: honeydew;
+  color:black;
+
+
+}
+table{
+  width: 100%
+}
